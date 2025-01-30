@@ -22,6 +22,8 @@ namespace CadastroVendas.Infracstruture.Configurations
                .IsRequired();
             builder.Property(x => x.DtaVenda)
               .IsRequired();
+            builder.Property(x => x.ValorTotal)
+              .IsRequired();
 
             builder.HasOne(c => c.Cliente)
                 .WithMany(t => t.Vendas)
